@@ -1,0 +1,25 @@
+{
+  "name": "wa-gateway",
+  "module": "index.ts",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.4.1",
+    "fastify": "^4.28.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/qrcode-terminal": "^0.12.2",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "scripts": {
+    "lint": "eslint --fix src",
+    "prettier": "prettier --write src",
+    "prepare": "husky install",
+    "build": "tsc --project tsconfig.build.json",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "dev": "nodemon --exec ts-node src/main.ts",
+    "start:prod": "node build/main.js"
+  }
+}

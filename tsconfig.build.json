@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "build", "public", "tests", "prisma", "externals", "internals", "templates", "logs", "databases", "cfg", ".husky", ".github"]
+}
